@@ -1,5 +1,4 @@
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const packageJSON = require('./package.json');
 
@@ -12,7 +11,6 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new Dotenv(),
     new HtmlWebpackPlugin({
       template: '!!html-loader!templates/index.html',
       favicon: './assets/images/mine.png',
