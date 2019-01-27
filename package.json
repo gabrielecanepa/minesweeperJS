@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/gabrielecanepa/minesweeperJS",
   "author": "Gabriele Canepa <gabriele@canepa.io>",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
@@ -25,6 +26,7 @@
     "stylelint": "^9.10.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-scss": "^3.5.1",
+    "svg-inline-loader": "^0.8.0",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"

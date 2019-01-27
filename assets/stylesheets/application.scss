@@ -51,9 +51,6 @@ body {
   }
 
   &.gameover {
-    .cell:not(.open) {
-      content: '';
-    }
     .cell.mine {
       background: red url('../images/mine.png') no-repeat center center;
       background-size: 80%;
@@ -64,5 +61,20 @@ body {
     .cell:not(.open) {
       background-color: green;
     }
+  }
+}
+
+#github-logo {
+  width: 2.5em;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+
+  path {
+    fill: white;
+    transition: all 200ms;
+  }
+  &:hover {
+    path { fill: #24292D }
   }
 }
