@@ -1,5 +1,7 @@
-let mines = 10;
-let size = 10;
+import { loseAlert, winAlert } from './alerts';
+
+const mines = 10;
+const size = 10;
 let tiles = [];
 let gameover = false;
 const gameBoard = document.getElementById('game-board');
@@ -43,9 +45,7 @@ const checkWin = () => {
 
   remainingTiles.forEach(tile => tile.classList.add('mine'));
   if (!gameover) {
-    const $heading = document.createElement('h2');
-    $heading.innerHTML = 'You won!';
-    gameBoard.appendChild($heading);
+    winAlert();
     gameover = true;
   }
 
@@ -84,11 +84,7 @@ const renderBoard = () => {
           if ($value < 0) $tiles[$index].classList.add('mine');
         });
 
-        const $heading = document.createElement('h2');
-        $heading.innerHTML = 'Game Over';
-        gameBoard.appendChild($heading);
-        gameover = true;
-
+        loseAlert();
         return gameBoard.classList.add('gameover');
       }
 
@@ -112,12 +108,12 @@ const renderBoard = () => {
               if (tiles[n]) {
                 $tiles[n].innerHTML = tiles[n];
               } else {
-                queue.includes(n) || queue.push(n);
+                return queue.includes(n) || queue.push(n);
               }
             });
 
-            queue.length ? checkNeighbours() : resolve();
-          }, 20);
+            return queue.length ? checkNeighbours() : resolve();
+          }, 10);
 
           checkNeighbours();
         });
@@ -129,8 +125,6 @@ const renderBoard = () => {
 };
 
 const startGame = () => {
-  mines = document.getElementById('mines').value;
-  size = document.getElementById('rows').value;
   gameover = false;
   generateGame();
   renderBoard();

@@ -6875,6 +6875,11 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
+sweetalert2@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.0.1.tgz#d59fa124a56595c1e799dd4c635689afa0a5f811"
+  integrity sha512-N88+meCLt1t/5dQEAvBs31j6qcEVucE/bwMj8JiuPsMRvXhnWKMbvLAFPGNO7a/LECRVjT6o0/mccmIVZqQZSQ==
+
 table@^5.0.0, table@^5.0.2:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/table/-/table-5.2.1.tgz#e78463702b1be9f7131c39860bcfb1b81114c2a1"
