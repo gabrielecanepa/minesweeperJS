@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="UTF-8">
-    <title>My webpack app</title>
+    <title>MinesweeperJS</title>
   </head>
 
   <body>
-    <code>webpack is running! 📦✨👌</code>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 offset-xs-1 col-lg-8 offset-lg-2">
+          <div id="game-board"></div>
+        </div>
+      </div>
+    </div>
+
+    <form style="display: none">
+      Rows: <input type="number" id="rows" name="rows" min="5" max="20" value="10"><br>
+      Mines: <input type="number" id="mines" name="mines" min="5" max="20" value="10"><br>
+      <button onclick="start()">start game</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
   </body>
 </html>

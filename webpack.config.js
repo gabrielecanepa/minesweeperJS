@@ -15,7 +15,7 @@ module.exports = {
     new Dotenv(),
     new HtmlWebpackPlugin({
       template: '!!html-loader!templates/index.html',
-      favicon: './assets/images/favicon.png',
+      favicon: './assets/images/mine.png',
       meta: {
         description: packageJSON.description
       }
@@ -41,6 +41,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader'
       }
     ]
   }
