@@ -34,5 +34,11 @@
   "dependencies": {
     "bootstrap": "^4.2.1",
     "sweetalert2": "^8.0.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "lint": "eslint ./src/**/*.js* && stylelint ./assets/stylesheets/**/*.*css",
+    "build": "webpack -p --bail",
+    "deploy": "gh-pages -d dist -m 'Automated deploy by gh-pages'"
   }
 }
